@@ -10,12 +10,11 @@
     $conexion = new mysqli($host, $user, $key, $database);
     $conexion->set_charset("utf8");
 
-    //Verificamos la conexión a la base de datos, "$conexion->connect_errno" verifica si ha ocurrido algún error durante la conexión, si el valor que retorna es distindo de 0 significa que ha ocurrido un error durante la conexión y la descripción de este se puede ver con "$conexion->connect_error"
+    //Aqui verificamos si ha ocurrido algún error en la conexión y este retorna un valor, si retorna un valor diferente a 0 significa que hubo un error, este se puede ver con "$conexion->connect_error"
     if ($conexion->connect_errno) {
-        echo "Ha fallado la conexión a la base de datos: " . $conexion->connect_error;
+        echo "Ha ocurrido un error en la base de datos: " . $conexion->connect_error;
     } else {
-        echo "Conexión exitosa a la base de datos";
+        echo "La conexión a la base de datos ha sido exitosa";
     }
-    
 
 ?>
