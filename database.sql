@@ -8,4 +8,6 @@ CREATE TABLE usuarios.users (
     nombre VARCHAR(50),
     correo VARCHAR(100),
     fecha DATE
-)
+);
+
+SELECT * FROM users;
