@@ -13,7 +13,7 @@
         if (!result) {
             die("Query failed");
         }else{
-            echo "Los datos se han guardado correctamente";
+            header("Location: index.php");
         }
     };
 
