@@ -4,18 +4,16 @@
 
     if (isset($_POST["guardar"])) {
 
-        $nombre = $_POST["nombre"];
-        $correo = $_POST["correo"];
-        $fecha = $_POST["fecha"];
+        $tarea = $_POST["tarea"];
+        $horaInicio = $_POST["horaInicio"];
+        $horaFinal = $_POST["horaFinal"];
 
-        $query = "INSERT INTO users(nombre, correo, fecha) VALUES ('$nombre', '$correo', '$fecha')";
+        $query = "INSERT INTO tareas(tarea, horaInicio, horaFinal) VALUES ('$tarea', '$horaInicio', '$horaFinal')";
         $result = mysqli_query($conexion, $query);
 
-        if (!$result) {
-            echo "Los datos no se han guardado correctamente";
-        }
-            
-        header("Location: index.php");
+        if ($result) {
+            header("Location: ../index.php");
+        }   
     };
 
 ?>

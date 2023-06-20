@@ -1,13 +1,15 @@
 /* Creamos la base de datos */
-CREATE DATABASE usuarios;
+CREATE DATABASE horarios;
 /* La usamos */
-USE usuarios;
+USE horarios;
 /* Creamos una tabla */
-CREATE TABLE usuarios.users (
+CREATE TABLE horarios.tareas (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(50),
-    correo VARCHAR(100),
-    fecha DATE
+    tarea VARCHAR(100),
+    horaInicio VARCHAR(50),
+    horaFinal VARCHAR(50)
 );
 
-SELECT * FROM users;
+SELECT * FROM tareas;
+
+UPDATE tareas set tarea = 'dormir', horaInicio = '$horaInicio', horaFinal = '$horaFinal' WHERE id = 11;

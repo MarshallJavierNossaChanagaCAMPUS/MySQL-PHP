@@ -4,7 +4,7 @@
     $port = "";
     $user = "campus";
     $key = "campus2023";
-    $database = "usuarios";
+    $database = "horarios";
 
     //Esta es la conexión como tal al servidor y a la base de datos
     $conexion = new mysqli($host, $user, $key, $database);
